@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" type="x-icon" href="img/logo.png">
+        <title>Penny Wise</title>
+        <link rel="stylesheet" href="dark.css" id="theme" />
+    </head>
+    <body>
+	
+		<div class="headerContainer"> <!-- This heading also notifies about the theme change.-->
+			<h1 id="toast">PennyWise</h1>
+            <div class="top-buttons">
+				<button type="button" onclick="changeTheme()" class="theme-button">
+					<img src="img/sun.png" alt="Theme Icon" height="19" width="19" id="theme-icon" class="thicon">
+				</button>
+			</div>
+		</div>
+        
+        <div class="firstRow"> 
+			
+			<!-- Start of Calculator -->
+			<div class="calculator">
+				<h1>Calculator</h1>
+				<div class="calcont">
+					<div class="first-row">
+						<input type="text" name="result" id="result" placeholder="Result" readonly />
+						<input type="button" value="C" onclick="result.value=''" id="clear-button" />
+					</div>
+					<div class="second-row">
+						<input type="button" value="1" onclick="liveScreen(1)" />
+						<input type="button" value="2" onclick="liveScreen(2)" />
+						<input type="button" value="3" onclick="liveScreen(3)" />
+						<input type="button" value="+" onclick="liveScreen('+')" />
+					</div>
+					<div class="third-row">
+						<input type="button" value="4" onclick=" liveScreen(4)" />
+						<input type="button" value="5" onclick=" liveScreen(5)" />
+						<input type="button" value="6" onclick=" liveScreen(6)" />
+						<input type="button" value="-" onclick="liveScreen('-')" />
+					</div>
+					<div class="fourth-row">
+						<input type="button" value="7" onclick="liveScreen(7)" />
+						<input type="button" value="8" onclick="liveScreen(8)" />
+						<input type="button" value="9" onclick=" liveScreen(9)" />
+						<input type="button" value="x" onclick="liveScreen('*')" />
+					</div>
+					<div class="fifth-row">
+						<input type="button" value="/" onclick="liveScreen('/')" />
+						<input type="button" value="0" onclick="liveScreen(0)" />
+						<input type="button" value="." onclick="liveScreen('.')" />
+						<input type="button" value="=" onclick="calculate(result.value)" />
+					</div>
+				</div>
+				<input type="button" value="Add" onclick="populateExpenseTracker()" class="btnTrack"/>
+			</div>
+			<!-- End of Calculator -->
+
+
+			<!-- Start of Expense Tracker -->
+            <div class="expenseTracker">
+				<h1>Expense Tracker</h1>
+				<h4>Your Balance</h4>
+				<h1 id="balance">&#8369;0.00</h1>
+				<div class="moneyCont">
+					<div>
+						<h4>Income</h4>
+						<p id="money-plus" class="moneyPlus">
+							+&#8369;0.00
+						</p>
+					</div>
+					<div>
+						<h4>Expense</h4>
+						<p id="money-minus" class="moneyMinus">
+							-&#8369;0.00
+						</p>
+					</div>
+				</div>
+				<div>
+					<h3>History</h3>
+					<button id="clear-btn" class="btn">Clear</button> <!-- Clear History Button -->
+				</div>
+				<ul id="list" class="list">
+					<li class="minus">
+					><button class="deleteBtn">x</button>
+					</li>
+				</ul>
+				<h3>Add New Transition</h3>
+				<form id="form">
+					<div class="form-control">
+						<label for="text" class="lblText">Text</label>
+						<input type="Etext" id="text" placeholder="Enter name"/>
+					</div>
+					<div class="form-control">
+						<label for="amount" class="lblText">Amount <br> (negative - expense ,positive - income )</label>
+						<input type="Enumber" id="amount" placeholder="Enter amount"> 
+					</div>
+					<button class="btn">Submit</button>
+				</form>
+			</div>
+        <!-- End of Expense Tracker -->
+
+        <!-- Start of Notes -->
+			<div>
+				<h1>Notes</h1>
+
+				<div class="popup-box">
+					<div class="popup">
+						<div class="content">
+							<header>
+								<p>Add a new note</p>
+								<i></i>
+							</header>		  
+							<form action="#">
+								<div class="row title">
+									<label for="">Title</label>
+									<input type="text" name="" id="">
+								</div>
+								<div class="row description">
+									<label for="">Text</label>
+									<textarea></textarea>
+								</div>
+								<button>Add Note</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="wrapper">
+					<li class="add-box">
+						<div class="icon"><i></i></div>
+						<p>Add New Note</p>
+					</li>
+				</div>
+			</div>
+        </div>
+        <!-- End of Notes -->
+
+        <!-- Javascript -->
+        <script src="script.js"></script>
+    </body>
+</html>
+

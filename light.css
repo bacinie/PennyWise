@@ -1,0 +1,489 @@
+/* CSS Reset & Global Styles */
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans';
+	-webkit-appearance: none;
+}
+
+::placeholder {
+	color: #DFB6B2;
+}
+
+body {
+	background-color: #FBE4D8; /* Adjusted for light theme */
+	transition: 0.8s all;
+}
+
+h1 {
+	margin-bottom: 1.5%;
+	color: #190019; /* Adjusted for light theme */
+	font-weight: normal;
+}
+
+h3 {
+	margin-bottom: 1.5%;
+	color: #190019; /* Adjusted for light theme */
+	font-weight: normal;
+}
+
+h4 {
+  margin: 0;
+  color: #190019; /* Adjusted for light theme */
+  text-transform: uppercase;
+}
+
+/* Header and Theme*/
+
+.headerContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 80%;
+}
+
+.top-buttons {
+	display: flex;
+	align-items: center;
+}
+
+.theme-button {
+	all: unset;
+	cursor: pointer;
+}
+
+.thicon {
+  width: 3%;
+  height: auto;
+  float: right;
+}
+
+.firstRow {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* calculator */
+
+.calculator {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.calcont {
+	width: 350px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+input {
+	padding: 25px;
+	color: #190019; /* Adjusted for light theme */
+	font-size: 1em;
+	cursor: pointer;
+	width: 70px;
+	background-color: #DFB6B2; /* Adjusted for light theme */
+	border: none;
+	outline: none;
+	border-radius: 100px;
+	margin: 0.2em;
+}
+
+.first-row,
+.second-row,
+.third-row,
+.fourth-row,
+.fifth-row {
+	margin-bottom: 4px;
+}
+
+input[type="text"] {
+	background-color: #DFB6B2; /* Adjusted for light theme */
+	width: 222.5px;
+}
+
+input[type="button"]:hover {
+	background-color: #854F6C; /* Adjusted for light theme */
+	color: #FBE4D8; /* Adjusted for light theme */
+}
+
+#clear-button {
+	background-color: #c0392b; /* Adjusted for light theme */
+	color: #FFF; /* Adjusted for light theme */
+}
+
+.btnTrack {
+  background-color: #FFF;
+  color: #190019;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btnTrack input {
+  background-color: #DFB6B2;
+  color: #190019;
+}
+
+.btnTrack input[type="button"]:hover {
+  background-color: #854F6C;
+  color: #FFF;
+}
+
+.btnTrack #clear-button {
+  background-color: #c0392b;
+  color: #FFF;
+}
+
+/* ExpenseTracker */
+
+.expenseTracker {
+  margin: 10px auto;
+  width: 350px;
+}
+
+h4 {
+  margin: 0;
+  color: #190019; /* Adjusted for light theme */
+  text-transform: uppercase;
+}
+
+.lblText {
+	color: #190019; /* Adjusted for light theme */
+	font-weight: normal;
+}
+
+input[type="Etext"],
+input[type="Enumber"] {
+  border: 1px solid #522B5B; /* Adjusted for light theme */
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.moneyCont {
+  background-color: #FFF; /* Adjusted for light theme */
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.moneyCont > div {
+  flex: 1;
+  text-align: center;
+}
+
+.moneyCont > div:first-of-type {
+  border-right: 1px solid #DFB6B2; /* Adjusted for light theme */
+}
+
+.money {
+  font-size: 2em; /* Fixed font size unit */
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.moneyPlus {
+  color: #2ecc71;
+}
+
+.moneyMinus {
+  color: #c0392b;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #9c88ff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  color: #FFF;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+  height: 200px; /* Set a fixed height for the list */
+  overflow-y: scroll; /* Add vertical scrollbar */
+}
+
+.list li {
+  background-color: #FFF; /* Adjusted for light theme */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+  border-right: 5px solid #c0392b;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+/* Start of Notes */
+
+.popup-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4); /* Adjusted for light theme */
+}
+
+.popup-box .popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  max-width: 400px;
+  width: 100%;
+}
+
+.popup .content {
+  background-color: #FBE4D8; /* Adjusted for light theme */
+  border-radius: 5px;
+}
+
+.popup .content header {
+  border-bottom: 1px solid #DFB6B2; /* Adjusted for light theme */
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+}
+
+.popup .content header p {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.popup .content header i {
+  font-size: 23px;
+  cursor: pointer;
+  color: #854F6C; /* Adjusted for light theme */
+}
+
+.popup-box,
+.popup-box.popup {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+.popup-box.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.content form {
+  margin: 15px 25px 35px;
+}
+
+.content form :where(input, textarea) {
+  width: 100%;
+  height: 50px;
+  outline: none;
+  font-size: 17px;
+  border-radius: 4px;
+  border: 1px solid #999;
+  padding: 0 15px;
+  background-color: #FFF; /* Adjusted for light theme */
+}
+
+form .row label {
+  margin-bottom: 6px;
+  font-size: 18px;
+  display: block;
+}
+
+.content form textarea {
+  height: 150px;
+  resize: none;
+  padding: 8px 15px;
+  background-color: #FFF; /* Adjusted for light theme */
+}
+
+.content form button {
+  background-color: #522B5B; /* Adjusted for light theme */
+  height: 50px;
+  width: 100%;
+  margin: 15px 0;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #FFF; /* Adjusted for light theme */
+}
+
+.wrapper {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 265px);
+  gap: 15px;
+}
+
+.wrapper li {
+  background-color: #FBE4D8; /* Adjusted for light theme */
+  list-style: none;
+  height: 250px;
+  border-radius: 1px;
+  padding: 15px 20px 20px;
+}
+
+.wrapper .note {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.add-box,
+.icon,
+.bottom-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.add-box .icon {
+  height: 78px;
+  width: 78px;
+  border-radius: 50%;
+  border: 2px dashed #854F6C; /* Adjusted for light theme */
+  font-size: 40px;
+  color: #2B124C; /* Adjusted for light theme */
+  cursor: pointer;
+}
+
+.add-box p {
+  font-weight: 500;
+  margin-top: 20px;
+  color: #2B124C; /* Adjusted for light theme */
+}
+
+.note p {
+  font-size: 22px;
+  font-weight: 500;
+  color: #190019; /* Adjusted for light theme */
+}
+
+.note span {
+  display: block;
+  font-size: 12px;
+  color: #522B5B; /* Adjusted for light theme */
+  margin-top: 5px;
+}
+
+.note .bottom-content {
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid #DFB6B2; /* Adjusted for light theme */
+}
+
+.bottom-content span {
+  color: #2B124C; /* Adjusted for light theme */
+  font-size: 14px;
+}
+
+.bottom-content .settings i {
+  cursor: pointer;
+  font-size: 15px;
+  color: #2B124C; /* Adjusted for light theme */
+}
+
+.settings {
+  position: relative;
+}
+
+.settings .menu {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  bottom: 0;
+  padding: 5px 0;
+  border-radius: 4px;
+  background-color: #FBE4D8; /* Adjusted for light theme */
+  right: -4px;
+
+  transform: scale(0);
+  transform-origin: bottom right;
+  transition: transform 0.2s ease;
+}
+
+.settings.show .menu {
+  transform: scale(1);
+}
+
+.settings .menu li {
+  height: 25px;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 17px 15px;
+}
+
+.menu li i {
+  padding-right: 8px;
+}
+
+.menu li:hover {
+  background-color: #DFB6B2; /* Adjusted for light theme */
+}
+
+.hide-icon {
+  display: none;
+}
